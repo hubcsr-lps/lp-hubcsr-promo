@@ -40,6 +40,7 @@ All colors MUST be HSL.
     /* Custom Design Tokens */
     --hubcsr-blue: 212 99% 40%;
     --hubcsr-green: 147 50% 56%;
+    --hubcsr-orange: 24 95% 53%; /* Keep for specific CTA buttons */
     --hubcsr-light-blue: 212 99% 95%;
     --text-muted: 215.4 16.3% 46.9%;
     
