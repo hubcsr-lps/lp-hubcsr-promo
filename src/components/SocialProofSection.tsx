@@ -26,24 +26,36 @@ const SocialProofSection = () => {
     }
   ];
 
+  const animationDelays = [
+    "animate-fade-in-delay-1",
+    "animate-fade-in-delay-2", 
+    "animate-fade-in-delay-3",
+    "animate-fade-in-delay-4",
+    "animate-fade-in-delay-5",
+    "animate-fade-in-delay-6"
+  ];
+
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 animate-fade-in-up">
             Organizações que confiam na hubCSR
           </h2>
-          <p className="text-muted-foreground text-lg mb-12">
+          <p className="text-muted-foreground text-lg mb-12 animate-slide-in-right animation-delay-200">
             Conectamos empresas a mais de 360 organizações parceiras
           </p>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
             {organizations.map((org, index) => (
-              <div key={index} className="p-4 border border-border rounded-lg bg-card hover:shadow-card transition-shadow flex items-center justify-center min-h-[80px]">
+              <div 
+                key={index} 
+                className={`p-4 border border-border rounded-lg bg-card hover:shadow-lg hover:shadow-hubcsr-green/20 hover:scale-105 transition-all duration-300 flex items-center justify-center min-h-[80px] ${animationDelays[index]}`}
+              >
                 <img
                   src={org.logo}
                   alt={`Logo ${org.name}`}
-                  className="max-w-full h-auto opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+                  className="max-w-full h-auto opacity-70 hover:opacity-100 transition-all duration-300 grayscale hover:grayscale-0 hover:scale-110"
                   style={{ maxHeight: '60px', objectFit: 'contain' }}
                 />
               </div>
