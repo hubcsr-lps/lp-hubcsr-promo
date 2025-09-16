@@ -9,7 +9,7 @@ const HeroSection = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBackground})` }}
       ></div>
-      <div className="absolute inset-0 bg-hubcsr-blue/80"></div>
+      <div className="absolute inset-0 bg-black/30"></div>
       
       <div className="relative z-10 container mx-auto px-6 pt-24 pb-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-8rem)]">
