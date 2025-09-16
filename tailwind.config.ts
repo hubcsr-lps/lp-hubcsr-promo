@@ -24,6 +24,7 @@ export default {
           foreground: "hsl(var(--primary-foreground))",
         },
         'hubcsr-blue': "hsl(var(--hubcsr-blue))",
+        'hubcsr-green': "hsl(var(--hubcsr-green))",
         'hubcsr-orange': "hsl(var(--hubcsr-orange))",
         'hubcsr-light-blue': "hsl(var(--hubcsr-light-blue))",
         secondary: {
