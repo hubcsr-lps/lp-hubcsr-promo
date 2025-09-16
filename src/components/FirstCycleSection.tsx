@@ -5,26 +5,26 @@ const FirstCycleSection = () => {
   const initialFeatures = [
     {
       icon: "🌐",
-      title: "Publicar um minisite exclusivo com logo, projetos e histórico."
+      title: "Tenha sua Página Social — a página de transparência da sua OSC, com sua marca, projetos e histórico"
     },
     {
       icon: "🤝",
-      title: "Ativar voluntariado com vagas simples."
+      title: "Ative o voluntariado com vagas simples e abertas"
     },
     {
-      icon: "📋",
-      title: "Cadastrar projetos ou eventos (novos ou históricos)."
+      icon: "📑",
+      title: "Cadastre projetos ou eventos (novos ou históricos)"
     },
     {
       icon: "📊",
-      title: "Emitir relatórios básicos para parceiros."
+      title: "Emita relatórios básicos para apresentar a parceiros"
     }
   ];
 
   const unlockFeatures = [
-    "Link exclusivo de doação (100% direto para sua OSC, sem taxas).",
-    "Página de doações pronta para compartilhar.",
-    "Relatórios para doadores e parceiros."
+    "Link exclusivo de doação (100% direto para sua OSC, sem taxas)",
+    "Página de doações pronta para compartilhar",
+    "Histórico de impacto que cresce a cada atividade"
   ];
 
   return (
@@ -36,13 +36,8 @@ const FirstCycleSection = () => {
             <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6 transition-all duration-700 ${
               isInView ? 'animate-fade-in' : 'opacity-0 translate-y-8'
             }`}>
-              Seu primeiro ciclo: <span className="text-hubcsr-blue">seu primeiro resultado</span>
+              👉 Em até 7 dias, sua OSC já <span className="text-hubcsr-blue">conquista seus primeiros resultados:</span>
             </h2>
-            <p className={`text-lg sm:text-xl text-gray-600 transition-all duration-700 ${
-              isInView ? 'animate-fade-in-delay-1' : 'opacity-0 translate-y-8'
-            }`}>
-              No seu primeiro ciclo de uso, sua OSC já pode:
-            </p>
           </div>
 
           <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 mb-12 sm:mb-16">
@@ -60,7 +55,7 @@ const FirstCycleSection = () => {
             isInView ? 'animate-fade-in-delay-6' : 'opacity-0 translate-y-8'
           }`}>
             <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 flex items-center gap-2">
-              ⚡️ Ao concluir, você desbloqueia:
+              ⚡ E ao concluir o primeiro ciclo, você ainda desbloqueia:
             </h3>
             
             <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
