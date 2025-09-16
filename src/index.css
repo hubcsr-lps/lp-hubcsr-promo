@@ -46,6 +46,7 @@ All colors MUST be HSL.
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(212 82% 39%), hsl(212 82% 45%)); /* Keep hero gradient unchanged */
     --gradient-section: linear-gradient(180deg, hsl(212 99% 97%), hsl(0 0% 100%));
+    --gradient-primary: linear-gradient(135deg, hsl(212 99% 40%), hsl(212 99% 45%));
     --gradient-green: linear-gradient(135deg, hsl(155 68% 50%), hsl(155 68% 60%));
     
     /* Shadows */
