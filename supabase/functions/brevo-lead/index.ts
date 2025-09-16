@@ -1,21 +1,13 @@
-import "https://deno.land/x/xhr@0.1.0/mod.ts";
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-
-const corsHeaders = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
-};
-
-serve(async (req) => {
+Deno.serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
-    const { nome, email, whatsapp, razaoSocial } = await req.json();
+    const { nome, email, TELEFONE_VALIDO, RAZAO_SOCIAL } = await req.json();
     
-    console.log('Received form data:', { nome, email, whatsapp, razaoSocial });
+    console.log('Received form data:', { nome, email, TELEFONE_VALIDO, razaoSocial });
 
     // Get Brevo API token from environment
     const brevoApiToken = Deno.env.get('BREVO_API_TOKEN');
@@ -30,19 +22,23 @@ serve(async (req) => {
       throw new Error('Formato da chave API inválido');
     }
 
+    // const whatsappFormatado = TELEFONE_VALIDO ? `+55${whatsapp.replace(/\D/g, '')}` : undefined;
+
+
     // Prepare contact data for Brevo API
-    const contactData = {
+    const xcontactData = {
       email: email,
       attributes: {
-        FIRSTNAME: nome,
-        WHATSAPP: whatsapp,
+        FIRSTNAME: "MEU NOVO" + nome,
+        TELEFONE_VALIDO: TELEFONE_VALIDO,
         RAZAO_SOCIAL: razaoSocial
       },
       listIds: [3], // Adding to list ID 3 (campanha_setembro)
       updateEnabled: true // Update if contact already exists
     };
 
-    console.log('Sending to Brevo:', contactData);
+    console.log('Sending to Brevo:', xcontactData);
+    console.log("teste novamente")
 
     // Send to Brevo API
     const brevoResponse = await fetch('https://api.brevo.com/v3/contacts', {
@@ -51,8 +47,7 @@ serve(async (req) => {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
         'api-key': brevoApiToken,
-      },
-      body: JSON.stringify(contactData),
+      }
     });
 
     const brevoData = await brevoResponse.json();

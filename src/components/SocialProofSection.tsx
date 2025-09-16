@@ -5,27 +5,19 @@ const SocialProofSection = () => {
   const organizations = [
     {
       name: "Instituto Ayrton Senna",
-      logo: "https://via.placeholder.com/150x60/e5e7eb/374151?text=Instituto+Senna"
+      logo: "/logos/logo-01.png"
     },
     {
       name: "Fundação Roberto Marinho",
-      logo: "https://via.placeholder.com/150x60/e5e7eb/374151?text=FRM"
+      logo: "/logos/logo-02.png"
     },
     {
       name: "Instituto Unilever",
-      logo: "https://via.placeholder.com/150x60/e5e7eb/374151?text=Unilever"
+      logo: "/logos/logo-03.png"
     },
     {
       name: "Banco Bradesco",
-      logo: "https://via.placeholder.com/150x60/e5e7eb/374151?text=Bradesco"
-    },
-    {
-      name: "Petrobras",
-      logo: "https://via.placeholder.com/150x60/e5e7eb/374151?text=Petrobras"
-    },
-    {
-      name: "Vale",
-      logo: "https://via.placeholder.com/150x60/e5e7eb/374151?text=Vale"
+      logo: "/logos/logo-04.png"
     }
   ];
 
@@ -53,7 +45,7 @@ const SocialProofSection = () => {
             Conectamos empresas a mais de 360 organizações parceiras
           </p>
           
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 lg:gap-8 items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 cursor-pointer gap-4 sm:gap-6 lg:gap-8 items-center">
             {organizations.map((org, index) => (
               <div 
                 key={index} 
@@ -65,7 +57,7 @@ const SocialProofSection = () => {
                   src={org.logo}
                   alt={`Logo ${org.name}`}
                   className="max-w-full h-auto opacity-70 hover:opacity-100 transition-all duration-300 grayscale hover:grayscale-0 hover:scale-110"
-                  style={{ maxHeight: '50px', objectFit: 'contain' }}
+                  style={{ height: '100px', objectFit: 'contain' }}
                 />
               </div>
             ))}

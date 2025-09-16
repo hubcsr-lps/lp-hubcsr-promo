@@ -19,7 +19,7 @@ const Index = () => {
       {/* <HumanSupportSection /> */}
       <SocialProofSection />
       <ConversionSection />
-      <FinalCallSection />
+      {/* <FinalCallSection /> */}
     </div>
   );
 };
