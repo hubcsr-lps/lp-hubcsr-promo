@@ -15,7 +15,7 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[calc(100vh-8rem)]">
           
           {/* Content */}
-          <div className="space-y-6 sm:space-y-8 text-center lg:text-left">
+          <div className="space-y-6 sm:space-y-8 text-center lg:text-left md:w-fit">
             <div className="space-y-4 sm:space-y-6">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight animate-fade-in-up">
                 Em até 7 dias sua OSC organizada e pronta para crescer.
@@ -39,7 +39,7 @@ const HeroSection = () => {
               </a>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-sm p-4 sm:p-6 rounded-xl border border-white/20 animate-fade-in-delay-3 hover:bg-white/10 transition-all duration-300">
+            <div className="bg-white/5 w-full backdrop-blur-sm p-4 sm:p-6 rounded-xl border border-white/20 animate-fade-in-delay-3 hover:bg-white/10 transition-all duration-300">
               <p className="text-base sm:text-lg font-semibold text-hubcsr-green">+30 OSCs já organizadas este mês</p>
               <p className="text-sm sm:text-base text-white/80 mt-2 italic">
                 "Em poucos dias já tínhamos projetos ativos e começamos a receber nossas primeiras doações."

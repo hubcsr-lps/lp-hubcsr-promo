@@ -4,19 +4,19 @@ const SocialProofSection = () => {
   const { ref, isInView } = useInView();
   const organizations = [
     {
-      name: "Instituto Ayrton Senna",
+      name: "Ambev Voa",
       logo: "/logos/logo-01.png"
     },
     {
-      name: "Fundação Roberto Marinho",
+      name: "Observatório do terceiro setor",
       logo: "/logos/logo-02.png"
     },
     {
-      name: "Instituto Unilever",
-      logo: "/logos/logo-03.png"
+      name: "Soul Alegria",
+      logo: "/logos/logo-05.webp"
     },
     {
-      name: "Banco Bradesco",
+      name: "Keeggo",
       logo: "/logos/logo-04.png"
     }
   ];

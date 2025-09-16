@@ -6,12 +6,12 @@ Deno.serve(async (req) => {
 
   try {
     const { nome, email, TELEFONE_VALIDO, RAZAO_SOCIAL } = await req.json();
-    
+
     console.log('Received form data:', { nome, email, TELEFONE_VALIDO, razaoSocial });
 
     // Get Brevo API token from environment
     const brevoApiToken = Deno.env.get('BREVO_API_TOKEN');
-    
+
     if (!brevoApiToken) {
       console.error('BREVO_API_TOKEN not found');
       throw new Error('API token não configurado');
@@ -47,7 +47,9 @@ Deno.serve(async (req) => {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
         'api-key': brevoApiToken,
-      }
+      },
+      body: JSON.stringify(brevoPayload),
+
     });
 
     const brevoData = await brevoResponse.json();
@@ -56,7 +58,7 @@ Deno.serve(async (req) => {
 
     if (!brevoResponse.ok) {
       console.error('Brevo API error:', brevoData);
-      
+
       // Handle specific error cases
       if (brevoResponse.status === 401) {
         throw new Error('Chave da API inválida ou expirada');
@@ -68,10 +70,10 @@ Deno.serve(async (req) => {
     }
 
     return new Response(
-      JSON.stringify({ 
-        success: true, 
+      JSON.stringify({
+        success: true,
         message: 'Lead criado com sucesso!',
-        brevoResponse: brevoData 
+        brevoResponse: brevoData
       }),
       {
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
@@ -81,10 +83,10 @@ Deno.serve(async (req) => {
 
   } catch (error) {
     console.error('Error in brevo-lead function:', error);
-    
+
     return new Response(
-      JSON.stringify({ 
-        success: false, 
+      JSON.stringify({
+        success: false,
         error: error.message || 'Erro interno do servidor'
       }),
       {
