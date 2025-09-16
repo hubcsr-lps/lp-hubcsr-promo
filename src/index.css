@@ -18,7 +18,7 @@ All colors MUST be HSL.
     --popover-foreground: 222.2 84% 4.9%;
 
     /* hubCSR Brand Colors */
-    --primary: 212 82% 39%; /* #0d5dbd - hubCSR Blue */
+    --primary: 212 99% 40%; /* #0265CB - hubCSR Blue */
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 40% 96.1%;
@@ -35,21 +35,22 @@ All colors MUST be HSL.
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 212 82% 39%;
+    --ring: 212 99% 40%;
     
     /* Custom Design Tokens */
-    --hubcsr-blue: 212 82% 39%;
+    --hubcsr-blue: 212 99% 40%;
     --hubcsr-orange: 24 95% 53%;
-    --hubcsr-light-blue: 212 82% 95%;
+    --hubcsr-light-blue: 212 99% 95%;
     --text-muted: 215.4 16.3% 46.9%;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(212 82% 39%), hsl(212 82% 45%));
-    --gradient-section: linear-gradient(180deg, hsl(212 82% 97%), hsl(0 0% 100%));
+    --gradient-hero: linear-gradient(135deg, hsl(212 82% 39%), hsl(212 82% 45%)); /* Keep hero gradient unchanged */
+    --gradient-section: linear-gradient(180deg, hsl(212 99% 97%), hsl(0 0% 100%));
+    --gradient-green: linear-gradient(135deg, hsl(155 68% 50%), hsl(155 68% 60%));
     
     /* Shadows */
-    --shadow-card: 0 4px 6px -1px hsl(212 82% 39% / 0.1);
-    --shadow-button: 0 2px 4px hsl(212 82% 39% / 0.2);
+    --shadow-card: 0 4px 6px -1px hsl(212 99% 40% / 0.1);
+    --shadow-button: 0 2px 4px hsl(212 99% 40% / 0.2);
 
     --radius: 0.5rem;
 
