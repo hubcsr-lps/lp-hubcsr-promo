@@ -15,8 +15,8 @@ const Index = () => {
       <HeroSection />
       <PainValidationSection />
       <FirstCycleSection />
-      <TransparentFundraisingSection />
-      <HumanSupportSection />
+      {/* <TransparentFundraisingSection /> */}
+      {/* <HumanSupportSection /> */}
       <SocialProofSection />
       <ConversionSection />
       <FinalCallSection />

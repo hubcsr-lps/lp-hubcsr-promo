@@ -24,7 +24,7 @@ const PainValidationSection = () => {
   ];
 
   return (
-    <section ref={ref} className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-hubcsr-green to-hubcsr-green/80">
+    <section ref={ref} className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-hubcsr-green to-emerald-600">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-4xl mx-auto text-center">
           
