@@ -61,12 +61,12 @@ const TransparentFundraisingSection = () => {
               
               <div className="relative z-10 space-y-4 sm:space-y-6">
                 <div className="bg-white/10 backdrop-blur-sm p-3 sm:p-4 rounded-lg border border-white/20">
-                  <h4 className="font-semibold text-hubcsr-orange mb-2">Link de Doação Ativo</h4>
+                  <h4 className="font-semibold text-hubcsr-green mb-2">Link de Doação Ativo</h4>
                   <p className="text-xs sm:text-sm text-white/90">hubcsr.com/doar/sua-osc</p>
                 </div>
                 
                 <div className="bg-white/10 backdrop-blur-sm p-3 sm:p-4 rounded-lg border border-white/20">
-                  <h4 className="font-semibold text-hubcsr-orange mb-2 sm:mb-3">Relatório de Impacto</h4>
+                  <h4 className="font-semibold text-hubcsr-green mb-2 sm:mb-3">Relatório de Impacto</h4>
                   <div className="space-y-1 sm:space-y-2">
                     <div className="flex justify-between text-xs sm:text-sm">
                       <span>Arrecadado este mês:</span>
