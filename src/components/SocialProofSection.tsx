@@ -1,11 +1,29 @@
 const SocialProofSection = () => {
   const organizations = [
-    "Instituto Ayrton Senna",
-    "Fundação Roberto Marinho",
-    "Instituto Unilever",
-    "Banco Bradesco",
-    "Petrobras",
-    "Vale"
+    {
+      name: "Instituto Ayrton Senna",
+      logo: "https://via.placeholder.com/150x60/e5e7eb/374151?text=Instituto+Senna"
+    },
+    {
+      name: "Fundação Roberto Marinho",
+      logo: "https://via.placeholder.com/150x60/e5e7eb/374151?text=FRM"
+    },
+    {
+      name: "Instituto Unilever",
+      logo: "https://via.placeholder.com/150x60/e5e7eb/374151?text=Unilever"
+    },
+    {
+      name: "Banco Bradesco",
+      logo: "https://via.placeholder.com/150x60/e5e7eb/374151?text=Bradesco"
+    },
+    {
+      name: "Petrobras",
+      logo: "https://via.placeholder.com/150x60/e5e7eb/374151?text=Petrobras"
+    },
+    {
+      name: "Vale",
+      logo: "https://via.placeholder.com/150x60/e5e7eb/374151?text=Vale"
+    }
   ];
 
   return (
@@ -21,8 +39,13 @@ const SocialProofSection = () => {
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
             {organizations.map((org, index) => (
-              <div key={index} className="p-4 border border-border rounded-lg bg-card hover:shadow-card transition-shadow">
-                <p className="text-sm font-medium text-card-foreground">{org}</p>
+              <div key={index} className="p-4 border border-border rounded-lg bg-card hover:shadow-card transition-shadow flex items-center justify-center min-h-[80px]">
+                <img
+                  src={org.logo}
+                  alt={`Logo ${org.name}`}
+                  className="max-w-full h-auto opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+                  style={{ maxHeight: '60px', objectFit: 'contain' }}
+                />
               </div>
             ))}
           </div>
