@@ -1,4 +1,7 @@
+import { useInView } from "@/hooks/useInView";
+
 const SocialProofSection = () => {
+  const { ref, isInView } = useInView();
   const organizations = [
     {
       name: "Instituto Ayrton Senna",
@@ -36,13 +39,17 @@ const SocialProofSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section ref={ref} className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 animate-fade-in-up">
+          <h2 className={`text-3xl md:text-4xl font-bold text-foreground mb-4 transition-all duration-700 ${
+            isInView ? 'animate-fade-in-up' : 'opacity-0 translate-y-8'
+          }`}>
             Organizações que confiam na hubCSR
           </h2>
-          <p className="text-muted-foreground text-lg mb-12 animate-slide-in-right animation-delay-200">
+          <p className={`text-muted-foreground text-lg mb-12 transition-all duration-700 ${
+            isInView ? 'animate-slide-in-right animate-fade-in-delay-1' : 'opacity-0 translate-x-8'
+          }`}>
             Conectamos empresas a mais de 360 organizações parceiras
           </p>
           
@@ -50,7 +57,9 @@ const SocialProofSection = () => {
             {organizations.map((org, index) => (
               <div 
                 key={index} 
-                className={`p-4 border border-border rounded-lg bg-card hover:shadow-lg hover:shadow-hubcsr-green/20 hover:scale-105 transition-all duration-300 flex items-center justify-center min-h-[80px] ${animationDelays[index]}`}
+                className={`p-4 border border-border rounded-lg bg-card hover:shadow-lg hover:shadow-hubcsr-green/20 hover:scale-105 transition-all duration-300 flex items-center justify-center min-h-[80px] ${
+                  isInView ? animationDelays[index] : 'opacity-0 scale-95'
+                }`}
               >
                 <img
                   src={org.logo}

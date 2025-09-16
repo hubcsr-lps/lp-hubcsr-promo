@@ -1,17 +1,26 @@
+import { useInView } from "@/hooks/useInView";
+
 const HumanSupportSection = () => {
+  const { ref, isInView } = useInView();
   return (
-    <section className="py-20 bg-hubcsr-light-blue/50">
+    <section ref={ref} className="py-20 bg-hubcsr-light-blue/50">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className={`text-3xl md:text-4xl font-bold text-gray-900 mb-6 transition-all duration-700 ${
+              isInView ? 'animate-fade-in' : 'opacity-0 translate-y-8'
+            }`}>
               Suporte <span className="text-hubcsr-blue">Humano</span>
             </h2>
-            <p className="text-2xl text-hubcsr-blue font-semibold mb-8">
+            <p className={`text-2xl text-hubcsr-blue font-semibold mb-8 transition-all duration-700 ${
+              isInView ? 'animate-fade-in-delay-1' : 'opacity-0 translate-y-8'
+            }`}>
               Você não fica sozinho.
             </p>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className={`text-xl text-gray-600 max-w-2xl mx-auto transition-all duration-700 ${
+              isInView ? 'animate-fade-in-delay-2' : 'opacity-0 translate-y-8'
+            }`}>
               Nossa equipe cria um grupo exclusivo no WhatsApp com especialistas prontos para apoiar cada etapa do seu ciclo inicial.
             </p>
           </div>
@@ -20,7 +29,9 @@ const HumanSupportSection = () => {
             
             {/* WhatsApp Mockup */}
             <div className="flex-1">
-              <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-200 max-w-sm mx-auto">
+              <div className={`bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-200 max-w-sm mx-auto transition-all duration-700 ${
+                isInView ? 'animate-slide-in-left animate-fade-in-delay-3' : 'opacity-0 -translate-x-8'
+              }`}>
                 
                 {/* Phone Header */}
                 <div className="bg-gray-900 h-8 flex items-center justify-center">
@@ -67,7 +78,9 @@ const HumanSupportSection = () => {
             {/* Content */}
             <div className="flex-1 space-y-8">
               <div className="space-y-6">
-                <div className="flex items-start gap-4 p-6 bg-white rounded-xl shadow-card border border-hubcsr-blue/20">
+                <div className={`flex items-start gap-4 p-6 bg-white rounded-xl shadow-card border border-hubcsr-blue/20 hover:shadow-lg transition-all duration-300 ${
+                  isInView ? 'animate-fade-in-scale-delay-4' : 'opacity-0 scale-95'
+                }`}>
                   <div className="text-2xl">👥</div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Especialistas Dedicados</h4>
@@ -75,7 +88,9 @@ const HumanSupportSection = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-6 bg-white rounded-xl shadow-card border border-hubcsr-blue/20">
+                <div className={`flex items-start gap-4 p-6 bg-white rounded-xl shadow-card border border-hubcsr-blue/20 hover:shadow-lg transition-all duration-300 ${
+                  isInView ? 'animate-fade-in-scale-delay-5' : 'opacity-0 scale-95'
+                }`}>
                   <div className="text-2xl">⚡</div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Suporte Rápido</h4>
@@ -83,7 +98,9 @@ const HumanSupportSection = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-6 bg-white rounded-xl shadow-card border border-hubcsr-blue/20">
+                <div className={`flex items-start gap-4 p-6 bg-white rounded-xl shadow-card border border-hubcsr-blue/20 hover:shadow-lg transition-all duration-300 ${
+                  isInView ? 'animate-fade-in-scale-delay-6' : 'opacity-0 scale-95'
+                }`}>
                   <div className="text-2xl">🎯</div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Acompanhamento Personalizado</h4>

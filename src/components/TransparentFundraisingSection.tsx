@@ -1,4 +1,7 @@
+import { useInView } from "@/hooks/useInView";
+
 const TransparentFundraisingSection = () => {
+  const { ref, isInView } = useInView();
   const features = [
     {
       icon: "🔗",
@@ -19,15 +22,19 @@ const TransparentFundraisingSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section ref={ref} className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
           
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className={`text-3xl md:text-4xl font-bold text-gray-900 mb-6 transition-all duration-700 ${
+              isInView ? 'animate-fade-in' : 'opacity-0 translate-y-8'
+            }`}>
               Captação de Recursos <span className="text-hubcsr-blue">Transparente</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className={`text-xl text-gray-600 max-w-3xl mx-auto transition-all duration-700 ${
+              isInView ? 'animate-fade-in-delay-1' : 'opacity-0 translate-y-8'
+            }`}>
               Com a hubCSR, sua OSC pode captar recursos com credibilidade e sem custos escondidos:
             </p>
           </div>
@@ -37,7 +44,9 @@ const TransparentFundraisingSection = () => {
             {/* Features List */}
             <div className="space-y-6">
               {features.map((feature, index) => (
-                <div key={index} className="flex items-start gap-4 p-4 bg-white rounded-xl shadow-card border border-gray-100 hover:shadow-lg transition-shadow">
+                <div key={index} className={`flex items-start gap-4 p-4 bg-white rounded-xl shadow-card border border-gray-100 hover:shadow-lg transition-all duration-300 hover:scale-102 ${
+                  isInView ? `animate-slide-in-left animate-fade-in-delay-${index + 2}` : 'opacity-0 -translate-x-8'
+                }`}>
                   <div className="text-2xl flex-shrink-0">{feature.icon}</div>
                   <p className="text-lg text-gray-700 font-medium">{feature.title}</p>
                 </div>
@@ -45,7 +54,9 @@ const TransparentFundraisingSection = () => {
             </div>
 
             {/* Visual Mockup */}
-            <div className="bg-gradient-to-br from-hubcsr-blue to-hubcsr-blue/80 p-8 rounded-2xl text-white relative overflow-hidden">
+            <div className={`bg-gradient-to-br from-hubcsr-blue to-hubcsr-blue/80 p-8 rounded-2xl text-white relative overflow-hidden transition-all duration-700 ${
+              isInView ? 'animate-slide-in-right animate-fade-in-delay-3' : 'opacity-0 translate-x-8'
+            }`}>
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
               
               <div className="relative z-10 space-y-6">

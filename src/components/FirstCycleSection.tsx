@@ -1,4 +1,7 @@
+import { useInView } from "@/hooks/useInView";
+
 const FirstCycleSection = () => {
+  const { ref, isInView } = useInView();
   const initialFeatures = [
     {
       icon: "🌐",
@@ -25,29 +28,37 @@ const FirstCycleSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section ref={ref} className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
           
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className={`text-3xl md:text-4xl font-bold text-gray-900 mb-6 transition-all duration-700 ${
+              isInView ? 'animate-fade-in' : 'opacity-0 translate-y-8'
+            }`}>
               Seu primeiro ciclo: <span className="text-hubcsr-blue">seu primeiro resultado</span>
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className={`text-xl text-gray-600 transition-all duration-700 ${
+              isInView ? 'animate-fade-in-delay-1' : 'opacity-0 translate-y-8'
+            }`}>
               No seu primeiro ciclo de uso, sua OSC já pode:
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 mb-16">
             {initialFeatures.map((feature, index) => (
-              <div key={index} className="flex items-start gap-4 p-6 bg-hubcsr-light-blue/30 rounded-xl border border-hubcsr-blue/20">
+              <div key={index} className={`flex items-start gap-4 p-6 bg-hubcsr-light-blue/30 rounded-xl border border-hubcsr-blue/20 hover:shadow-lg transition-all duration-300 ${
+                isInView ? `animate-fade-in-scale-delay-${index + 2}` : 'opacity-0 scale-95'
+              }`}>
                 <div className="text-2xl">{feature.icon}</div>
                 <p className="text-lg text-gray-700 font-medium">{feature.title}</p>
               </div>
             ))}
           </div>
 
-          <div className="bg-gradient-to-r from-hubcsr-blue to-hubcsr-blue/80 text-white p-8 rounded-2xl">
+          <div className={`bg-gradient-to-r from-hubcsr-blue to-hubcsr-blue/80 text-white p-8 rounded-2xl transition-all duration-700 ${
+            isInView ? 'animate-fade-in-delay-6' : 'opacity-0 translate-y-8'
+          }`}>
             <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
               ⚡️ Ao concluir, você desbloqueia:
             </h3>

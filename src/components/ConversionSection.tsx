@@ -2,8 +2,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
+import { useInView } from "@/hooks/useInView";
 
 const ConversionSection = () => {
+  const { ref, isInView } = useInView();
   const [formData, setFormData] = useState({
     nome: "",
     whatsapp: "",
@@ -24,18 +26,24 @@ const ConversionSection = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-hubcsr-blue to-hubcsr-blue/90 text-white">
+    <section ref={ref} className="py-20 bg-gradient-to-br from-hubcsr-blue to-hubcsr-blue/90 text-white">
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
           
           <div className="text-center mb-16">
-            <div className="inline-block bg-hubcsr-orange px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className={`inline-block bg-hubcsr-orange px-4 py-2 rounded-full text-sm font-semibold mb-6 transition-all duration-700 ${
+              isInView ? 'animate-bounce-subtle animate-fade-in' : 'opacity-0 scale-95'
+            }`}>
               🎯 OFERTA DE LANÇAMENTO
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className={`text-3xl md:text-4xl font-bold mb-6 transition-all duration-700 ${
+              isInView ? 'animate-fade-in-delay-1' : 'opacity-0 translate-y-8'
+            }`}>
               Acesso completo à hubCSR por apenas <span className="text-hubcsr-orange">R$ 350/mês</span>
             </h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto">
+            <p className={`text-xl text-white/90 max-w-3xl mx-auto transition-all duration-700 ${
+              isInView ? 'animate-fade-in-delay-2' : 'opacity-0 translate-y-8'
+            }`}>
               Exclusiva, por tempo limitado, para organizações sociais que querem dar o próximo passo em profissionalização e captação de recursos.
             </p>
           </div>
@@ -43,7 +51,9 @@ const ConversionSection = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             
             {/* Opção 1 - Formulário */}
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+            <div className={`bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 transition-all duration-700 ${
+              isInView ? 'animate-slide-in-left animate-fade-in-delay-3' : 'opacity-0 -translate-x-8'
+            }`}>
               <h3 className="text-2xl font-bold mb-6">
                 👉 Opção 1 – Formulário rápido
               </h3>
@@ -100,7 +110,9 @@ const ConversionSection = () => {
             </div>
 
             {/* Opção 2 - Contato Direto */}
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+            <div className={`bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 transition-all duration-700 ${
+              isInView ? 'animate-slide-in-right animate-fade-in-delay-3' : 'opacity-0 translate-x-8'
+            }`}>
               <h3 className="text-2xl font-bold mb-6">
                 👉 Opção 2 – Contato direto
               </h3>
