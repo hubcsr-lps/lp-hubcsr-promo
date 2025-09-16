@@ -61,7 +61,7 @@ const FirstCycleSection = () => {
             <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
               {unlockFeatures.map((feature, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-hubcsr-orange rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-hubcsr-green rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
                   <p className="text-base sm:text-lg text-white/95">{feature}</p>
                 </div>
               ))}

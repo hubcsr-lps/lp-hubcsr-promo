@@ -102,7 +102,7 @@ const ConversionSection = () => {
                 <Button 
                   type="submit"
                   size="lg"
-                  className="w-full text-wrap h-fit bg-green-600 hover:bg-green-700 text-white py-3 sm:py-4 text-base sm:text-lg rounded-lg shadow-lg"
+                  className="w-full text-wrap h-fit bg-hubcsr-green hover:bg-hubcsr-green/90 text-white py-3 sm:py-4 text-base sm:text-lg rounded-lg shadow-lg"
                 >
                   Quero aproveitar a oferta de lançamento
                 </Button>
