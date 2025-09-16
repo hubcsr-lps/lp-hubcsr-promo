@@ -1,13 +1,14 @@
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo-hubcsr-01.png";
+
 
 const Header = () => {
   return (
     <header className="absolute top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-sm">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold text-white drop-shadow-lg">
-            hub<span className="text-hubcsr-orange">CSR</span>
-          </div>
+          
+          <img src={logo} />
           <nav className="hidden md:flex items-center gap-8">
             <a href="#solucoes" className="text-white/90 hover:text-white transition-colors drop-shadow">
               Soluções

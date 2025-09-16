@@ -28,7 +28,7 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg"
-                className="bg-hubcsr-orange hover:bg-hubcsr-orange/90 text-white px-8 py-4 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all"
+                className="bg-hubcsr-orange w-full text-wrap h-fit hover:bg-hubcsr-orange/90 text-white px-8 py-4 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all"
               >
                 👉 Testar minha OSC por R$ 350/mês (sem fidelidade)
               </Button>

@@ -40,7 +40,7 @@ const ConversionSection = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             
             {/* Opção 1 - Formulário */}
             <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
@@ -92,7 +92,7 @@ const ConversionSection = () => {
                 <Button 
                   type="submit"
                   size="lg"
-                  className="w-full bg-green-600 hover:bg-green-700 text-white py-4 text-lg rounded-lg shadow-lg"
+                  className="w-full text-wrap h-fit bg-green-600  hover:bg-green-700 text-white py-4 text-lg rounded-lg shadow-lg"
                 >
                   Quero aproveitar a oferta de lançamento
                 </Button>
@@ -112,7 +112,7 @@ const ConversionSection = () => {
                 
                 <Button 
                   size="lg"
-                  className="w-full bg-hubcsr-orange hover:bg-hubcsr-orange/90 text-white py-4 text-lg rounded-lg shadow-lg"
+                  className="w-full text-wrap h-fit bg-hubcsr-orange hover:bg-hubcsr-orange/90 text-white py-4 text-lg rounded-lg shadow-lg"
                 >
                   Falar agora com nossos especialistas → WhatsApp
                 </Button>

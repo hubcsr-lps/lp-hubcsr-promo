@@ -18,7 +18,7 @@ const FinalCallSection = () => {
             <div className="pt-8">
               <Button 
                 size="lg"
-                className="bg-hubcsr-blue hover:bg-hubcsr-blue/90 text-white px-12 py-6 text-xl rounded-xl shadow-xl hover:shadow-2xl transition-all transform hover:scale-105"
+                className="bg-hubcsr-blue w-full text-wrap h-fit hover:bg-hubcsr-blue/90 text-white px-12 py-6 text-xl rounded-xl shadow-xl hover:shadow-2xl transition-all transform hover:scale-105"
               >
                 👉 Começar agora por R$ 350/mês, sem fidelidade
               </Button>
@@ -52,7 +52,7 @@ const FinalCallSection = () => {
       {/* Fixed CTA for mobile */}
       <div className="fixed bottom-0 left-0 right-0 bg-hubcsr-blue text-white p-4 shadow-2xl lg:hidden z-50">
         <Button 
-          className="w-full bg-hubcsr-orange hover:bg-hubcsr-orange/90 text-white py-4 text-lg font-semibold rounded-lg"
+          className="w-full text-wrap h-fit bg-hubcsr-orange hover:bg-hubcsr-orange/90 text-white py-4 text-lg font-semibold rounded-lg"
         >
           Começar agora por R$ 350/mês, sem fidelidade
         </Button>
