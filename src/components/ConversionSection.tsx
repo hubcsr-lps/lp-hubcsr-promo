@@ -3,19 +3,56 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
 import { useInView } from "@/hooks/useInView";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
 
 const ConversionSection = () => {
   const { ref, isInView } = useInView();
   const [formData, setFormData] = useState({
     nome: "",
     whatsapp: "",
-    email: ""
+    email: "",
+    razaoSocial: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke('brevo-lead', {
+        body: formData
+      });
+
+      if (error) throw error;
+
+      if (data?.success) {
+        toast({
+          title: "Sucesso!",
+          description: "Seus dados foram enviados com sucesso. Entraremos em contato em breve!",
+        });
+        
+        // Reset form
+        setFormData({
+          nome: "",
+          whatsapp: "",
+          email: "",
+          razaoSocial: ""
+        });
+      } else {
+        throw new Error(data?.error || 'Erro desconhecido');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: "Erro",
+        description: "Houve um erro ao enviar seus dados. Tente novamente ou entre em contato pelo WhatsApp.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -99,12 +136,26 @@ const ConversionSection = () => {
                   />
                 </div>
 
+                <div>
+                  <Label htmlFor="razaoSocial" className="text-white text-sm sm:text-base font-medium">Razão Social</Label>
+                  <Input
+                    id="razaoSocial"
+                    name="razaoSocial"
+                    value={formData.razaoSocial}
+                    onChange={handleChange}
+                    required
+                    className="mt-2 bg-white/20 border-white/30 text-white placeholder-white/60"
+                    placeholder="Nome da sua organização"
+                  />
+                </div>
+
                 <Button 
                   type="submit"
                   size="lg"
-                  className="w-full text-wrap h-fit bg-hubcsr-green hover:bg-hubcsr-green/90 text-white py-3 sm:py-4 text-base sm:text-lg rounded-lg shadow-lg"
+                  disabled={isSubmitting}
+                  className="w-full text-wrap h-fit bg-hubcsr-green hover:bg-hubcsr-green/90 text-white py-3 sm:py-4 text-base sm:text-lg rounded-lg shadow-lg disabled:opacity-50"
                 >
-                  Quero aproveitar a oferta de lançamento
+                  {isSubmitting ? "Enviando..." : "Quero aproveitar a oferta de lançamento"}
                 </Button>
               </form>
             </div>
