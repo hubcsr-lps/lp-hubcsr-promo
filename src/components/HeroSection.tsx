@@ -1,10 +1,15 @@
 import { Button } from "@/components/ui/button";
 import heroMockup from "@/assets/hero-mockup.jpg";
+import heroBackground from "@/assets/hero-background.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-hubcsr-blue to-hubcsr-blue/90 text-white overflow-hidden">
-      <div className="absolute inset-0 bg-black/20"></div>
+    <section className="relative min-h-screen text-white overflow-hidden">
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroBackground})` }}
+      ></div>
+      <div className="absolute inset-0 bg-hubcsr-blue/80"></div>
       
       <div className="relative z-10 container mx-auto px-6 pt-24 pb-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-8rem)]">
