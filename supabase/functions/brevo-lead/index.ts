@@ -20,13 +20,14 @@ serve(async (req) => {
     // Get Brevo API token from environment
     const brevoApiToken = Deno.env.get('BREVO_API_TOKEN');
     
-    console.log('BREVO_API_TOKEN exists:', !!brevoApiToken);
-    console.log('BREVO_API_TOKEN length:', brevoApiToken ? brevoApiToken.length : 0);
-    console.log('BREVO_API_TOKEN first 10 chars:', brevoApiToken ? brevoApiToken.substring(0, 10) + '...' : 'none');
-    
     if (!brevoApiToken) {
       console.error('BREVO_API_TOKEN not found');
-      throw new Error('API token not configured');
+      throw new Error('API token não configurado');
+    }
+
+    if (!brevoApiToken.startsWith('xkeysib-')) {
+      console.error('Invalid API key format - should start with xkeysib-');
+      throw new Error('Formato da chave API inválido');
     }
 
     // Prepare contact data for Brevo API
@@ -55,11 +56,20 @@ serve(async (req) => {
     });
 
     const brevoData = await brevoResponse.json();
+    console.log('Brevo response status:', brevoResponse.status);
     console.log('Brevo response:', brevoData);
 
     if (!brevoResponse.ok) {
       console.error('Brevo API error:', brevoData);
-      throw new Error(`Brevo API error: ${brevoData.message || 'Unknown error'}`);
+      
+      // Handle specific error cases
+      if (brevoResponse.status === 401) {
+        throw new Error('Chave da API inválida ou expirada');
+      } else if (brevoResponse.status === 400) {
+        throw new Error(`Dados inválidos: ${brevoData.message || 'erro desconhecido'}`);
+      } else {
+        throw new Error(`Erro da API Brevo: ${brevoData.message || 'erro desconhecido'}`);
+      }
     }
 
     return new Response(
