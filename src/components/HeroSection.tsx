@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroMockup from "@/assets/hero-mockup.jpg";
-import heroBackground from "@/assets/hero-background.jpg";
+import heroBackground from "@/assets/hubcsr-01.png";
 
 const HeroSection = () => {
   return (
@@ -9,7 +9,7 @@ const HeroSection = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBackground})` }}
       ></div>
-      <div className="absolute inset-0 bg-black/30"></div>
+      <div className="absolute inset-0 "></div>
       
       <div className="relative z-10 container mx-auto px-6 pt-24 pb-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-8rem)]">
@@ -34,7 +34,7 @@ const HeroSection = () => {
               </Button>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
+            <div className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/20">
               <p className="text-lg font-semibold text-hubcsr-orange">+30 OSCs já organizadas este mês</p>
               <p className="text-white/80 mt-2 italic">
                 "Em poucos dias já tínhamos projetos ativos e começamos a receber nossas primeiras doações."
@@ -43,18 +43,7 @@ const HeroSection = () => {
           </div>
 
           {/* Visual */}
-          <div className="relative">
-            <div className="relative z-10">
-              <img 
-                src={heroMockup} 
-                alt="Interface hubCSR - Desktop e mobile"
-                className="w-full max-w-lg mx-auto shadow-2xl rounded-xl"
-              />
-            </div>
-            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-hubcsr-orange/20 rounded-full blur-3xl"></div>
-            <div className="absolute -top-4 -left-4 w-24 h-24 bg-white/20 rounded-full blur-2xl"></div>
-          </div>
-
+         
         </div>
       </div>
     </section>
