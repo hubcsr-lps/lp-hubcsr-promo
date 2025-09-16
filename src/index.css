@@ -27,7 +27,7 @@ All colors MUST be HSL.
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 24 95% 53%; /* Orange CTA button */
+    --accent: 147 50% 56%; /* Green CTA button */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -39,7 +39,7 @@ All colors MUST be HSL.
     
     /* Custom Design Tokens */
     --hubcsr-blue: 212 99% 40%;
-    --hubcsr-orange: 24 95% 53%;
+    --hubcsr-green: 147 50% 56%;
     --hubcsr-light-blue: 212 99% 95%;
     --text-muted: 215.4 16.3% 46.9%;
     

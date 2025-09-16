@@ -22,7 +22,7 @@ const Header = () => {
           </nav>
           <Button 
             variant="default" 
-            className="bg-hubcsr-orange hover:bg-hubcsr-orange/90 text-white px-6 py-2 rounded-lg shadow-button"
+            className="bg-hubcsr-green hover:bg-hubcsr-green/90 text-white px-6 py-2 rounded-lg shadow-button"
           >
             Entre em contato
           </Button>
