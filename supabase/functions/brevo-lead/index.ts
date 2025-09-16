@@ -20,6 +20,10 @@ serve(async (req) => {
     // Get Brevo API token from environment
     const brevoApiToken = Deno.env.get('BREVO_API_TOKEN');
     
+    console.log('BREVO_API_TOKEN exists:', !!brevoApiToken);
+    console.log('BREVO_API_TOKEN length:', brevoApiToken ? brevoApiToken.length : 0);
+    console.log('BREVO_API_TOKEN first 10 chars:', brevoApiToken ? brevoApiToken.substring(0, 10) + '...' : 'none');
+    
     if (!brevoApiToken) {
       console.error('BREVO_API_TOKEN not found');
       throw new Error('API token not configured');
