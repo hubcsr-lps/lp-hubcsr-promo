@@ -67,7 +67,7 @@ const FinalCallSection = () => {
       {/* Fixed CTA for mobile */}
       <div className="fixed bottom-0 left-0 right-0 bg-hubcsr-blue text-white p-3 sm:p-4 shadow-2xl lg:hidden z-50">
         <Button 
-          className="w-full text-wrap h-fit bg-hubcsr-orange hover:bg-hubcsr-orange/90 text-white py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-lg"
+          className="w-full text-wrap h-fit bg-hubcsr-green hover:bg-hubcsr-green/90 text-white py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-lg"
         >
           Começar agora por R$ 350/mês, sem fidelidade
         </Button>

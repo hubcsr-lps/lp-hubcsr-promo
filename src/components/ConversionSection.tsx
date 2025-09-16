@@ -31,7 +31,7 @@ const ConversionSection = () => {
         <div className="max-w-5xl mx-auto">
           
           <div className="text-center mb-12 sm:mb-16">
-            <div className={`inline-block bg-hubcsr-orange px-3 sm:px-4 py-2 rounded-full text-sm font-semibold mb-4 sm:mb-6 transition-all duration-700 ${
+            <div className={`inline-block bg-hubcsr-green px-3 sm:px-4 py-2 rounded-full text-sm font-semibold mb-4 sm:mb-6 transition-all duration-700 ${
               isInView ? 'animate-bounce-subtle animate-fade-in' : 'opacity-0 scale-95'
             }`}>
               🎯 OFERTA DE LANÇAMENTO
@@ -39,7 +39,7 @@ const ConversionSection = () => {
             <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 transition-all duration-700 ${
               isInView ? 'animate-fade-in-delay-1' : 'opacity-0 translate-y-8'
             }`}>
-              Acesso completo à hubCSR por apenas <span className="text-hubcsr-orange">R$ 350/mês</span>
+              Acesso completo à hubCSR por apenas <span className="text-hubcsr-green">R$ 350/mês</span>
             </h2>
             <p className={`text-lg sm:text-xl text-white/90 max-w-3xl mx-auto transition-all duration-700 ${
               isInView ? 'animate-fade-in-delay-2' : 'opacity-0 translate-y-8'
@@ -124,7 +124,7 @@ const ConversionSection = () => {
                 
                 <Button 
                   size="lg"
-                  className="w-full text-wrap h-fit bg-hubcsr-orange hover:bg-hubcsr-orange/90 text-white py-3 sm:py-4 text-base sm:text-lg rounded-lg shadow-lg"
+                  className="w-full text-wrap h-fit bg-hubcsr-green hover:bg-hubcsr-green/90 text-white py-3 sm:py-4 text-base sm:text-lg rounded-lg shadow-lg"
                 >
                   Falar agora com nossos especialistas → WhatsApp
                 </Button>
@@ -133,19 +133,19 @@ const ConversionSection = () => {
                   <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4">Por que escolher a hubCSR?</h4>
                   <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base text-white/90">
                     <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-hubcsr-orange rounded-full mt-2 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-hubcsr-green rounded-full mt-2 flex-shrink-0"></div>
                       <span>100% das doações vão direto para sua OSC</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-hubcsr-orange rounded-full mt-2 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-hubcsr-green rounded-full mt-2 flex-shrink-0"></div>
                       <span>Suporte humano especializado</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-hubcsr-orange rounded-full mt-2 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-hubcsr-green rounded-full mt-2 flex-shrink-0"></div>
                       <span>Sem fidelidade - pode cancelar quando quiser</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-hubcsr-orange rounded-full mt-2 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-hubcsr-green rounded-full mt-2 flex-shrink-0"></div>
                       <span>Resultados em poucos dias</span>
                     </li>
                   </ul>
