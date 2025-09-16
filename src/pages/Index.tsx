@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import PainValidationSection from "@/components/PainValidationSection";
 import FirstCycleSection from "@/components/FirstCycleSection";
+import SolutionsSection from "@/components/SolutionsSection";
 import TransparentFundraisingSection from "@/components/TransparentFundraisingSection";
 import HumanSupportSection from "@/components/HumanSupportSection";
 import SocialProofSection from "@/components/SocialProofSection";
