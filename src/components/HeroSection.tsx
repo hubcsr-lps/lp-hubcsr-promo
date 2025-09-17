@@ -5,15 +5,15 @@ import heroBackground from "@/assets/hubcsr-01.png";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen text-white overflow-hidden">
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBackground})` }}
       ></div>
       <div className="absolute inset-0 "></div>
-      
+
       <div className="relative z-10 container mx-auto px-4 sm:px-6 pt-20 sm:pt-24 pb-12 sm:pb-16">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[calc(100vh-8rem)]">
-          
+
           {/* Content */}
           <div className="space-y-6 sm:space-y-8 text-center lg:text-left md:w-fit">
             <div className="space-y-4 sm:space-y-6">
@@ -27,16 +27,22 @@ const HeroSection = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-delay-2 justify-center lg:justify-start">
               <a href="#quero-aproveitar"
-                
-                className="lg:text-nowrap bg-hubcsr-green hover:bg-hubcsr-green/90 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 w-full sm:w-auto"
+
+                className="lg:text-nowrap font-medium bg-hubcsr-green hover:bg-hubcsr-green/90 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 w-full sm:w-auto"
               >
                 Quero minha OSC pronta em até 7 dias
               </a>
-              <a href="http://wa.me/+5511917124081?text=Ol%C3%A1%21+Quero+minha+OSC+organizada+em+at%C3%A9+7+dias&type=phone_number&app_absent=0" 
-                className="lg:text-nowrap bg-hubcsr-orange hover:bg-hubcsr-orange/90 border-hubcsr-orange text-white hover:text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 w-full sm:w-auto"
+              <Button href="http://wa.me/+5511917124081?text=Ol%C3%A1%21+Quero+minha+OSC+organizada+em+at%C3%A9+7+dias&type=phone_number&app_absent=0"
+                className="lg:text-nowrap md:h-full bg-hubcsr-orange hover:bg-hubcsr-orange/90 border-hubcsr-orange text-white hover:text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 w-full sm:w-auto"
+                onClick={
+                  () => {
+                    alert("click")
+                    window.chatWidget.open()
+                  }
+                }
               >
                 Falar com um especialista
-              </a>
+              </Button>
             </div>
 
             <div className="bg-white/5 w-full backdrop-blur-sm p-4 sm:p-6 rounded-xl border border-white/20 animate-fade-in-delay-3 hover:bg-white/10 transition-all duration-300">
@@ -48,7 +54,7 @@ const HeroSection = () => {
           </div>
 
           {/* Visual - Empty for now */}
-         
+
         </div>
       </div>
     </section>

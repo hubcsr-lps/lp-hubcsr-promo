@@ -1,26 +1,63 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>hubCSR - 100% das doações para sua OSC</title>
-    <meta name="description" content="Organize projetos, engaje voluntários e apresente dados confiáveis. 100% das doações vão direto para sua OSC. Apenas R$ 350/mês, sem fidelidade." />
-    <meta name="author" content="hubCSR" />
 
-    <meta property="og:title" content="hubCSR - 100% das doações para sua OSC" />
-    <meta property="og:description" content="Organize projetos, engaje voluntários e apresente dados confiáveis. 100% das doações vão direto para sua OSC." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="/hubcsr-01.png" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>hubCSR - 100% das doações para sua OSC</title>
+  <meta name="description"
+    content="Organize projetos, engaje voluntários e apresente dados confiáveis. 100% das doações vão direto para sua OSC. Apenas R$ 350/mês, sem fidelidade." />
+  <meta name="author" content="hubCSR" />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@hubcsr" />
-    <meta name="twitter:image" content="/hubcsr-01.png" />
+  <meta property="og:title" content="hubCSR - 100% das doações para sua OSC" />
+  <meta property="og:description"
+    content="Organize projetos, engaje voluntários e apresente dados confiáveis. 100% das doações vão direto para sua OSC." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/hubcsr-01.png" />
 
-    <link rel="icon" type="image/png" href="/logo-hubcsr-02.png">
-  </head>
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@hubcsr" />
+  <meta name="twitter:image" content="/hubcsr-01.png" />
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <link rel="icon" type="image/png" href="/logo-hubcsr-02.png">
+  <script type="module">
+    import Chatbox from 'https://cdn.jsdelivr.net/npm/@chatvolt/embeds@latest/dist/chatbox/index.js';
+
+    const widget = await Chatbox.initBubble({
+      agentId: 'cmfb4wial01esdhx3gwc3l3h9',
+
+      //[optional] If provided will create a contact for the user and link it to the conversation
+      contact: {
+        firstName: 'John',
+        lastName: 'Doe',
+        email: 'customer@email.com',
+        phoneNumber: '+33612345644',
+      },
+
+      //[optional] Override initial messages
+      interface: {
+        initialMessages: [
+          'Olá, tudo bem?',
+          'Você está pronto(a) para ter sua OSC organizada e pronta para crescer em até 7 dias?',
+        ],
+      },
+
+      //[optional] Provided context will be Appended to the Agent system prompt
+      context: "cliente está vindo do site (https://lp.hubcsr.tech/) que é uma lp exclusiva para campanha.",
+    });
+
+    // Optional Controllers:
+    widget.open();
+    widget.close();
+    widget.toggle();
+
+    window.chatWidget = widget;
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>
