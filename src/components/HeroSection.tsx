@@ -36,7 +36,6 @@ const HeroSection = () => {
                 className="lg:text-nowrap md:h-full bg-hubcsr-orange hover:bg-hubcsr-orange/90 border-hubcsr-orange text-white hover:text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 w-full sm:w-auto"
                 onClick={
                   () => {
-                    alert("click")
                     window.chatWidget.open()
                   }
                 }
