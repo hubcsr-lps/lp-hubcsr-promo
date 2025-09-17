@@ -28,7 +28,7 @@ const FirstCycleSection = () => {
   ];
 
   return (
-    <section ref={ref} className="py-12 sm:py-16 lg:py-20 bg-white">
+    <section id="solucao" ref={ref} className="py-12 sm:py-16 lg:py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
           

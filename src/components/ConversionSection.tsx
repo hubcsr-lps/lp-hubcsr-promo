@@ -142,7 +142,7 @@ const ConversionSection = () => {
               ))}
             </div>
             {/* Box principal (CTA) */}
-            <div className={`bg-white/10 backdrop-blur-sm border-white/20 border p-6  sm:p-8 rounded-2xl   transition-all duration-700 ${isInView ? 'animate-slide-in-left animate-fade-in-delay-2' : 'opacity-0 -translate-x-8'
+            <div id="quero-aproveitar" className={`bg-white/10 backdrop-blur-sm border-white/20 border p-6  sm:p-8 rounded-2xl   transition-all duration-700 ${isInView ? 'animate-slide-in-left animate-fade-in-delay-2' : 'opacity-0 -translate-x-8'
               }`}>
               <h3 className="text-xl  sm:text-2xl font-bold mb-4">
                 💬 Fale agora com nossos especialistas
