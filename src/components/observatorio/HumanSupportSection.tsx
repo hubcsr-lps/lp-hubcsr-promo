@@ -27,24 +27,24 @@ const HumanSupportSection = () => {
                 </div>
 
                 {/* WhatsApp Header */}
-                <div className="bg-green-600 text-white p-3 sm:p-4 flex items-center gap-2 sm:gap-3">
+                <div className="bg-gradient-to-r from-hubcsr-blue to-hubcsr-blue/80 text-white p-3 sm:p-4 flex items-center gap-2 sm:gap-3">
                   <div className="w-8 sm:w-10 h-8 sm:h-10 bg-green-400 rounded-full flex items-center justify-center">
-                    <span className="text-xs sm:text-sm font-semibold">HC</span>
+                    <span className="text-xs sm:text-sm font-semibold">CO</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-sm sm:text-base">Equipe hubCSR + OSC Pioneira</h4>
+                    <h4 className="font-semibold text-sm sm:text-base">Comunidade</h4>
                     <p className="text-xs text-green-100">online</p>
                   </div>
                 </div>
 
                 {/* Messages */}
-                <div className="p-3 sm:p-4 space-y-2 sm:space-y-3 bg-green-50 min-h-[250px] sm:min-h-[300px]">
+                <div className="p-3 sm:p-4 space-y-2 sm:space-y-3 bg-hubcsr-blue/10 min-h-[250px] sm:min-h-[300px]">
                   <div className="bg-white p-2 sm:p-3 rounded-lg shadow-sm max-w-xs">
-                    <p className="text-xs sm:text-sm text-gray-700">Olá! Bem-vindos à hubCSR 👋</p>
-                    <p className="text-xs text-gray-500 mt-1">Especialista Ana - 09:15</p>
+                    <p className="text-xs sm:text-sm text-gray-700">Olá! Bem-vindos à comunidade 👋</p>
+                    <p className="text-xs text-gray-500 mt-1">Ana - 09:15</p>
                   </div>
 
-                  <div className="bg-green-500 text-white p-2 sm:p-3 rounded-lg shadow-sm max-w-xs ml-auto">
+                  <div className="bg-hubcsr-blue text-white p-2 sm:p-3 rounded-lg shadow-sm max-w-xs ml-auto">
                     <p className="text-xs sm:text-sm">Obrigada! Estamos ansiosos para começar 🙂</p>
                     <p className="text-xs text-green-100 mt-1">09:18</p>
                   </div>

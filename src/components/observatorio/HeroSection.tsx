@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroBackground from "@/assets/hubcsr-01.png";
+import heroBackground from "/hubcsr-observatorio.png";
 
 const HeroSection = () => {
   return (
@@ -33,21 +33,24 @@ const HeroSection = () => {
               >
                 Quero ativar minha página
               </a>
-              <a
-                href="http://wa.me/+5511917124081?text=Ol%C3%A1%21+Quero+ativar+minha+p%C3%A1gina+com+o+apoio+do+Observat%C3%B3rio+do+Terceiro+Setor&type=phone_number&app_absent=0"
+              <button
+                onClick={
+                  window.chatWidget.open()
+
+                }
                 className="lg:text-nowrap md:h-full bg-hubcsr-orange hover:bg-hubcsr-orange/90 border-hubcsr-orange text-white hover:text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 w-full sm:w-auto text-center"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Falar com um especialista
-              </a>
+              </button>
             </div>
           </div>
 
           {/* Visual - Empty for now */}
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 

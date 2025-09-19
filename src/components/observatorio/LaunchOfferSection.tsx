@@ -23,7 +23,7 @@ const LaunchOfferSection = () => {
   ];
 
   return (
-    <section ref={ref} id="oferta" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-hubcsr-blue to-hubcsr-blue/90 text-white">
+    <section ref={ref} id="oferta" className="py-12 sm:py-16 lg:py-20 bg-white text-hubcsr-blue">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
           {/* Cabeçalho */}
@@ -36,7 +36,7 @@ const LaunchOfferSection = () => {
               Oferta Exclusiva de Lançamento
             </h2>
             <p
-              className={`text-white/90 text-lg sm:text-xl max-w-3xl mx-auto mt-4 transition-all duration-700 ${
+              className={`text-black text-lg sm:text-xl max-w-3xl mx-auto mt-4 transition-all duration-700 ${
                 isInView
                   ? "animate-fade-in-delay-1"
                   : "opacity-0 translate-y-8"
@@ -52,7 +52,7 @@ const LaunchOfferSection = () => {
             {offers.map((offer, index) => (
               <div
                 key={index}
-                className={`flex flex-col items-center text-center p-6 sm:p-8 bg-white/10 backdrop-blur-sm border-white/20 border rounded-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl ${
+                className={`flex flex-col items-center text-center p-6 sm:p-8 bg-hubcsr-blue/3 backdrop-blur-sm border-black/20 border rounded-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl ${
                   isInView
                     ? `animate-fade-in-scale-delay-${index + 2}`
                     : "opacity-0 scale-95"
@@ -62,7 +62,7 @@ const LaunchOfferSection = () => {
                 <h3 className="text-xl sm:text-2xl font-bold mb-2">
                   {offer.title}
                 </h3>
-                <p className="text-white/80 text-base sm:text-lg">
+                <p className="text-black text-base sm:text-lg">
                   {offer.description}
                 </p>
               </div>

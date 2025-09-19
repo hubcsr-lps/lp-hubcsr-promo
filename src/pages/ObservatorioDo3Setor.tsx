@@ -9,11 +9,9 @@ import InvestmentSection from "@/components/observatorio/InvestmentSection";
 // aaa
 import HumanSupportSection from "@/components/observatorio/HumanSupportSection";
 import SolutionsSection from "@/components/observatorio/SolutionsSection";
-
-
+import BenefitsOsc from "@/components/observatorio/BenefitsOsc";
 
 const ObservatorioDo3Setor = () => {
-
 
     return (
         <div className="min-h-screen">
@@ -21,12 +19,14 @@ const ObservatorioDo3Setor = () => {
             <HeroSection />
             <HumanSupportSection />
             <PainValidationSection />
+            <BenefitsOsc />
+
+
             <SocialProofSection />
-            <InvestmentSection />
-            <SolutionsSection />
-            <ConversionSection />
-            <FirstCycleSection />
+            {/* <SolutionsSection /> */}
             <LaunchOfferSection />
+            <FirstCycleSection />
+            <InvestmentSection />
         </div>
     );
 };
