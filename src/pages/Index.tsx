@@ -3,7 +3,6 @@ import HeroSection from "@/components/HeroSection";
 import PainValidationSection from "@/components/PainValidationSection";
 import FirstCycleSection from "@/components/FirstCycleSection";
 import TransparentFundraisingSection from "@/components/TransparentFundraisingSection";
-import HumanSupportSection from "@/components/HumanSupportSection";
 import SocialProofSection from "@/components/SocialProofSection";
 import ConversionSection from "@/components/ConversionSection";
 import FinalCallSection from "@/components/FinalCallSection";

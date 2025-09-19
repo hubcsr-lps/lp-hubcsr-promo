@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ObservatorioDo3Setor from "./pages/Observatorio-do-3-setor";
+import ObservatorioV2 from "./pages/ObservatorioV2";
 
 const queryClient = new QueryClient();
 
@@ -18,6 +19,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/observatorio-do-3-setor" element={<ObservatorioDo3Setor/>} />
+          <Route path="/observatorio-v2" element={<ObservatorioV2/>} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

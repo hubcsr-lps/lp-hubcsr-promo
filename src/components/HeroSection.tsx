@@ -32,16 +32,14 @@ const HeroSection = () => {
               >
                 Quero minha OSC pronta em até 7 dias
               </a>
-              <Button href="http://wa.me/+5511917124081?text=Ol%C3%A1%21+Quero+minha+OSC+organizada+em+at%C3%A9+7+dias&type=phone_number&app_absent=0"
-                className="lg:text-nowrap md:h-full bg-hubcsr-orange hover:bg-hubcsr-orange/90 border-hubcsr-orange text-white hover:text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 w-full sm:w-auto"
-                onClick={
-                  () => {
-                    window.chatWidget.open()
-                  }
-                }
+              <a 
+                href="http://wa.me/+5511917124081?text=Ol%C3%A1%21+Quero+minha+OSC+organizada+em+at%C3%A9+7+dias&type=phone_number&app_absent=0"
+                className="lg:text-nowrap md:h-full bg-hubcsr-orange hover:bg-hubcsr-orange/90 border-hubcsr-orange text-white hover:text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 w-full sm:w-auto text-center"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Falar com um especialista
-              </Button>
+              </a>
             </div>
 
             <div className="bg-white/5 w-full backdrop-blur-sm p-4 sm:p-6 rounded-xl border border-white/20 animate-fade-in-delay-3 hover:bg-white/10 transition-all duration-300">
