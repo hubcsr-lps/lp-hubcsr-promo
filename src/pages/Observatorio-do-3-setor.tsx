@@ -6,6 +6,9 @@ import SocialProofSection from "@/components/observatorio/SocialProofSection";
 import ConversionSection from "@/components/observatorio/ConversionSection";
 import LaunchOfferSection from "@/components/observatorio/LaunchOfferSection";
 import InvestmentSection from "@/components/observatorio/InvestmentSection";
+// aaa
+import HumanSupportSection from "@/components/observatorio/HumanSupportSection";
+import SolutionsSection from "@/components/observatorio/SolutionsSection";
 
 
 
@@ -16,10 +19,12 @@ const ObservatorioDo3Setor = () => {
         <div className="min-h-screen">
             <Header />
             <HeroSection />
+            <HumanSupportSection />
             <PainValidationSection />
             <SocialProofSection />
-            <ConversionSection />
             <InvestmentSection />
+            <SolutionsSection />
+            <ConversionSection />
             <FirstCycleSection />
             <LaunchOfferSection />
         </div>
