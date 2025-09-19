@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import heroBackground from "/hubcsr-observatorio.png";
+import heroBackground from "@/assets/hubcsr-observatorio.png";
+
 
 const HeroSection = () => {
   return (
