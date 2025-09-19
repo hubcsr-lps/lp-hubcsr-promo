@@ -4,7 +4,7 @@ const TestimonialSectionV2 = () => {
   const { ref, isInView } = useInView();
 
   return (
-    <section ref={ref} id="depoimento" className="py-16 sm:py-20 lg:py-24 bg-background">
+    <section ref={ref} id="depoimento" className="py-16 sm:py-20 lg:py-24 bg-hubcsr-green/5">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
           {/* Header */}
@@ -12,12 +12,12 @@ const TestimonialSectionV2 = () => {
             <h2 className={`text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-8 transition-all duration-700 ${
               isInView ? "animate-fade-in-up" : "opacity-0 translate-y-8"
             }`}>
-              O que dizem sobre a parceria
+              O que dizem sobre a <span className="text-hubcsr-green">parceria</span>
             </h2>
           </div>
 
           {/* Testimonial Card */}
-          <div className={`bg-card border border-border rounded-3xl p-8 sm:p-12 shadow-lg mb-12 transition-all duration-700 ${
+          <div className={`bg-card border border-hubcsr-green/20 rounded-3xl p-8 sm:p-12 shadow-lg mb-12 transition-all duration-700 ${
             isInView ? "animate-fade-in-scale-delay-1" : "opacity-0 scale-95"
           }`}>
             <blockquote className="text-xl sm:text-2xl text-foreground italic leading-relaxed text-center mb-8">
@@ -25,14 +25,14 @@ const TestimonialSectionV2 = () => {
             </blockquote>
             
             <div className="flex items-center justify-center gap-4">
-              <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center">
+              <div className="w-16 h-16 bg-hubcsr-green/10 border border-hubcsr-green/20 rounded-full flex items-center justify-center">
                 <span className="text-2xl">🏢</span>
               </div>
               <div className="text-center">
                 <p className="font-semibold text-foreground text-lg">
                   Observatório do Terceiro Setor
                 </p>
-                <p className="text-muted-foreground">
+                <p className="text-hubcsr-green font-medium">
                   Logo Observatório do Terceiro Setor
                 </p>
               </div>
@@ -45,7 +45,7 @@ const TestimonialSectionV2 = () => {
           }`}>
             <a
               href="#investimento"
-              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-primary-foreground bg-primary rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-hubcsr-green hover:bg-hubcsr-green/90 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
             >
               Quero integrar minha OSC à rede do Observatório
             </a>

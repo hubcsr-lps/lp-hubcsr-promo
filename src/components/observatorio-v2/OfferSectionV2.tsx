@@ -31,7 +31,7 @@ const OfferSectionV2 = () => {
             <h2 className={`text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-8 transition-all duration-700 ${
               isInView ? "animate-fade-in-up" : "opacity-0 translate-y-8"
             }`}>
-              Oferta Exclusiva de Lançamento
+              <span className="text-hubcsr-green">Oferta Exclusiva</span> de Lançamento
             </h2>
             <p className={`text-xl sm:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto transition-all duration-700 ${
               isInView ? "animate-fade-in-up animate-fade-in-delay-1" : "opacity-0 translate-y-8"
@@ -45,11 +45,11 @@ const OfferSectionV2 = () => {
             {offers.map((offer, index) => (
               <div
                 key={index}
-                className={`text-center p-8 bg-card border border-border rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 ${
+                className={`text-center p-8 bg-card border border-border hover:border-hubcsr-green/30 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 ${
                   isInView ? `animate-fade-in-scale-delay-${index + 2}` : "opacity-0 scale-95"
                 }`}
               >
-                <div className="text-primary mb-6 flex justify-center">
+                <div className="text-hubcsr-green mb-6 flex justify-center">
                   {offer.icon}
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-4">
@@ -68,7 +68,7 @@ const OfferSectionV2 = () => {
           }`}>
             <a
               href="#final-cta"
-              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-primary-foreground bg-primary rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-hubcsr-green hover:bg-hubcsr-green/90 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
             >
               Quero garantir minha condição especial
             </a>

@@ -36,7 +36,7 @@ const BenefitsSectionV2 = () => {
   ];
 
   return (
-    <section ref={ref} id="beneficios" className="py-16 sm:py-20 lg:py-24 bg-primary/5">
+    <section ref={ref} id="beneficios" className="py-16 sm:py-20 lg:py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
@@ -44,7 +44,7 @@ const BenefitsSectionV2 = () => {
             <h2 className={`text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-8 transition-all duration-700 ${
               isInView ? "animate-fade-in-up" : "opacity-0 translate-y-8"
             }`}>
-              Benefícios para sua OSC
+              <span className="text-hubcsr-green">Benefícios</span> para sua OSC
             </h2>
           </div>
 
@@ -53,11 +53,11 @@ const BenefitsSectionV2 = () => {
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className={`flex items-start gap-4 p-6 bg-card border border-border rounded-xl shadow-sm hover:shadow-md transition-all duration-500 ${
+                className={`flex items-start gap-4 p-6 bg-card border border-border rounded-xl shadow-sm hover:shadow-md hover:border-hubcsr-green/30 transition-all duration-500 ${
                   isInView ? `animate-fade-in-scale-delay-${index + 1}` : "opacity-0 scale-95"
                 }`}
               >
-                <div className="flex-shrink-0 text-primary">
+                <div className="flex-shrink-0 text-hubcsr-green">
                   {benefit.icon}
                 </div>
                 <p className="text-lg text-foreground font-medium leading-relaxed">
@@ -71,14 +71,14 @@ const BenefitsSectionV2 = () => {
           <div className={`text-center mb-12 transition-all duration-700 ${
             isInView ? "animate-fade-in-up animate-fade-in-delay-8" : "opacity-0 translate-y-8"
           }`}>
-            <div className="bg-muted/50 rounded-2xl p-12 mb-8">
+            <div className="bg-gradient-to-br from-hubcsr-green/10 to-hubcsr-green/5 border border-hubcsr-green/20 rounded-2xl p-12 mb-8">
               <div className="text-6xl mb-4">📊</div>
               <p className="text-muted-foreground text-lg">Mockup de um relatório de impacto</p>
             </div>
 
             <a
               href="#depoimento"
-              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-primary-foreground bg-primary rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-hubcsr-green hover:bg-hubcsr-green/90 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
             >
               Quero esses benefícios para minha OSC
             </a>
