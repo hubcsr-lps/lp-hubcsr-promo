@@ -28,7 +28,7 @@ const SocialProofSection = () => {
             </blockquote>
             <div className="flex items-center justify-center mt-6">
               <img
-                src="/logos/logo-02.png" // Reutilizando o logo do componente original
+                src="/logo-observatorio.png" // Reutilizando o logo do componente original
                 alt="Logo Observatório do Terceiro Setor"
                 className="h-10 mr-4 opacity-80"
               />

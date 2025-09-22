@@ -14,8 +14,14 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 pt-20 sm:pt-24 pb-12 sm:pb-16">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[calc(100vh-8rem)]">
           {/* Content */}
+
           <div className="space-y-6 sm:space-y-8 text-center lg:text-left md:w-fit">
             <div className="space-y-4 sm:space-y-6">
+              <img
+                src="/logo-observatorio.png" // Reutilizando o logo do componente original
+                alt="Logo Observatório do Terceiro Setor"
+                className="h-10 mr-4 opacity-80"
+              />
               <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight animate-fade-in-up">
                 Sua OSC conectada ao futuro do Terceiro Setor
               </h1>

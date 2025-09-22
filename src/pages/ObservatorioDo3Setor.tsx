@@ -19,13 +19,11 @@ const ObservatorioDo3Setor = () => {
             <HeroSection />
             <HumanSupportSection />
             <PainValidationSection />
-            <BenefitsOsc />
-
-
             <SocialProofSection />
+            <BenefitsOsc />
             {/* <SolutionsSection /> */}
             <LaunchOfferSection />
-            <FirstCycleSection />
+            {/* <FirstCycleSection /> */}
             <InvestmentSection />
         </div>
     );
