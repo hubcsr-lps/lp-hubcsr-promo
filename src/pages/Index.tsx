@@ -14,7 +14,7 @@ const Index = () => {
   useMetaTags({
     title: "hubCSR - 100% das doações para sua OSC",
     description: "Organize projetos, engaje voluntários e apresente dados confiáveis. 100% das doações vão direto para sua OSC. Apenas R$ 350/mês, sem fidelidade.",
-    image: "https://lp.hubcsr.tech/hubcsr-01.png",
+    image: "/hubcsr-01.png",
     url: "https://lp.hubcsr.tech/"
   });
 
@@ -29,11 +29,7 @@ const Index = () => {
       <SocialProofSection />
       <ConversionSection />
       {/* <FinalCallSection /> */}
-      <SocialSharingBanner 
-        title="Em até 7 dias sua OSC organizada e pronta para crescer"
-        description="Ganhe visibilidade, engaje voluntários e comece a receber doações de forma simples e transparente — tudo por apenas R$ 350/mês."
-        imageUrl={heroBackground}
-      />
+      
     </div>
   );
 };

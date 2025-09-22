@@ -18,7 +18,7 @@ const ObservatorioDo3Setor = () => {
     useMetaTags({
         title: "Sua OSC conectada ao futuro do Terceiro Setor - Observatório + hubCSR",
         description: "O Observatório do Terceiro Setor e a hubCSR se uniram para fortalecer organizações sociais com infraestrutura digital completa: visibilidade, gestão e rede de voluntários em um só lugar.",
-        image: "https://lp.hubcsr.tech/logo-observatorio.png",
+        image: "/logo-observatorio.png",
         url: "https://lp.hubcsr.tech/observatorio-do-3-setor"
     });
 
@@ -34,11 +34,7 @@ const ObservatorioDo3Setor = () => {
             <LaunchOfferSection />
             {/* <FirstCycleSection /> */}
             <InvestmentSection />
-            <SocialSharingBanner 
-                title="Sua OSC conectada ao futuro do Terceiro Setor"
-                description="O Observatório do Terceiro Setor e a hubCSR se uniram para fortalecer organizações sociais com infraestrutura digital completa: visibilidade, gestão e rede de voluntários em um só lugar."
-                imageUrl={heroBackground}
-            />
+          
         </div>
     );
 };
