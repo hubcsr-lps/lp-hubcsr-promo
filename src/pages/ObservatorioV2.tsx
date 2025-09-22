@@ -9,8 +9,16 @@ import OfferSectionV2 from "@/components/observatorio-v2/OfferSectionV2";
 import FinalCTASectionV2 from "@/components/observatorio-v2/FinalCTASectionV2";
 import SocialSharingBanner from "@/components/SocialSharingBanner";
 import heroBackground from "@/assets/hero-background.jpg";
+import { useMetaTags } from "@/hooks/useMetaTags";
 
 const ObservatorioV2 = () => {
+  useMetaTags({
+    title: "Sua OSC conectada ao futuro do Terceiro Setor - Observatório + hubCSR",
+    description: "O Observatório do Terceiro Setor e a hubCSR se uniram para fortalecer organizações sociais com infraestrutura digital completa: visibilidade, gestão e rede de voluntários em um só lugar.",
+    image: "https://lp.hubcsr.tech/logo-observatorio.png",
+    url: "https://lp.hubcsr.tech/observatorio-v2"
+  });
+
   return (
     <div className="min-h-screen">
       <Header />
