@@ -33,13 +33,11 @@ const HeroSection = () => {
                 Quero minha OSC pronta em até 7 dias
               </a>
               <button 
-                // href="http://wa.me/+5511917124081?text=Ol%C3%A1%21+Quero+minha+OSC+organizada+em+at%C3%A9+7+dias&type=phone_number&app_absent=0"
-                onClick={
-                  window.chatWidget.open()
-                }
+                onClick={() => {
+                  // Handle chat widget or contact
+                  console.log('Contact clicked');
+                }}
                 className="lg:text-nowrap md:h-full bg-hubcsr-orange hover:bg-hubcsr-orange/90 border-hubcsr-orange text-white hover:text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 w-full sm:w-auto text-center"
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 Falar com um especialista
               </button>

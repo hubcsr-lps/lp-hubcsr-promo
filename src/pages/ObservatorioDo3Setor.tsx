@@ -10,6 +10,8 @@ import InvestmentSection from "@/components/observatorio/InvestmentSection";
 import HumanSupportSection from "@/components/observatorio/HumanSupportSection";
 import SolutionsSection from "@/components/observatorio/SolutionsSection";
 import BenefitsOsc from "@/components/observatorio/BenefitsOsc";
+import SocialSharingBanner from "@/components/SocialSharingBanner";
+import heroBackground from "@/assets/hubcsr-observatorio.png";
 
 const ObservatorioDo3Setor = () => {
 
@@ -25,6 +27,11 @@ const ObservatorioDo3Setor = () => {
             <LaunchOfferSection />
             {/* <FirstCycleSection /> */}
             <InvestmentSection />
+            <SocialSharingBanner 
+                title="Sua OSC conectada ao futuro do Terceiro Setor"
+                description="O Observatório do Terceiro Setor e a hubCSR se uniram para fortalecer organizações sociais com infraestrutura digital completa: visibilidade, gestão e rede de voluntários em um só lugar."
+                imageUrl={heroBackground}
+            />
         </div>
     );
 };

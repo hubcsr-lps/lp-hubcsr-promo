@@ -6,6 +6,8 @@ import TransparentFundraisingSection from "@/components/TransparentFundraisingSe
 import SocialProofSection from "@/components/SocialProofSection";
 import ConversionSection from "@/components/ConversionSection";
 import FinalCallSection from "@/components/FinalCallSection";
+import SocialSharingBanner from "@/components/SocialSharingBanner";
+import heroBackground from "@/assets/hubcsr-01.png";
 
 const Index = () => {
   return (
@@ -19,6 +21,11 @@ const Index = () => {
       <SocialProofSection />
       <ConversionSection />
       {/* <FinalCallSection /> */}
+      <SocialSharingBanner 
+        title="Em até 7 dias sua OSC organizada e pronta para crescer"
+        description="Ganhe visibilidade, engaje voluntários e comece a receber doações de forma simples e transparente — tudo por apenas R$ 350/mês."
+        imageUrl={heroBackground}
+      />
     </div>
   );
 };
