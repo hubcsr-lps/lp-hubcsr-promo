@@ -20,7 +20,7 @@ const HeroSection = () => {
               <img
                 src="/logo-observatorio.png" // Reutilizando o logo do componente original
                 alt="Logo Observatório do Terceiro Setor"
-                className="h-10 mr-4 opacity-80"
+                className="h-10 mr-4"
               />
               <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight animate-fade-in-up">
                 Sua OSC conectada ao futuro do Terceiro Setor
