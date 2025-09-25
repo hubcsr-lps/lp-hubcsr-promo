@@ -5,6 +5,7 @@ import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import heroMockup from "@/assets/hero-mockup.jpg";
 import heroBackground from "@/assets/hubcsr-01.png";
+import { ArrowRight } from "lucide-react";
 
 interface FormData {
   nome: string;
@@ -19,7 +20,6 @@ const HeroSection = () => {
     try {
       const { error } = await supabase.functions.invoke('brevo-lead', {
         body: {
-          nome: data.nome,
           email: data.email,
           RAZAO_SOCIAL: data.nome // usando nome da OSC como razão social
         }
@@ -33,7 +33,7 @@ const HeroSection = () => {
         title: "Sucesso!",
         description: "Seus dados foram enviados com sucesso. Entraremos em contato em breve!",
       });
-      
+
       reset();
     } catch (error) {
       console.error('Erro ao enviar formulário:', error);
@@ -68,7 +68,7 @@ const HeroSection = () => {
             </div>
 
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 animate-fade-in-delay-2">
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-2">
                 <div className="flex-1">
                   <Input
                     {...register("nome", { required: "Nome da OSC é obrigatório" })}
@@ -81,7 +81,7 @@ const HeroSection = () => {
                 </div>
                 <div className="flex-1">
                   <Input
-                    {...register("email", { 
+                    {...register("email", {
                       required: "E-mail é obrigatório",
                       pattern: {
                         value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
@@ -99,9 +99,9 @@ const HeroSection = () => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="h-12 px-8 text-base bg-hubcsr-green hover:bg-hubcsr-green/90 text-white rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 whitespace-nowrap"
+                  className="h-12 px-4 text-base bg-hubcsr-orange hover:bg-hubcsr-orange/90 text-white rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 whitespace-nowrap"
                 >
-                  {isSubmitting ? "Enviando..." : "Quero minha OSC pronta"}
+                  {isSubmitting ? "Enviando..." : <ArrowRight />}
                 </Button>
               </div>
             </form>
