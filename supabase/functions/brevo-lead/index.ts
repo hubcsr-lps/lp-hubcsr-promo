@@ -1,3 +1,8 @@
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+};
+
 Deno.serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
@@ -5,9 +10,9 @@ Deno.serve(async (req) => {
   }
 
   try {
-    const { nome, email, TELEFONE_VALIDO, RAZAO_SOCIAL } = await req.json();
+    const { nome, email, RAZAO_SOCIAL } = await req.json();
 
-    console.log('Received form data:', { nome, email, TELEFONE_VALIDO, razaoSocial });
+    console.log('Received form data:', { nome, email, RAZAO_SOCIAL });
 
     // Get Brevo API token from environment
     const brevoApiToken = Deno.env.get('BREVO_API_TOKEN');
@@ -22,23 +27,18 @@ Deno.serve(async (req) => {
       throw new Error('Formato da chave API inválido');
     }
 
-    // const whatsappFormatado = TELEFONE_VALIDO ? `+55${whatsapp.replace(/\D/g, '')}` : undefined;
-
-
     // Prepare contact data for Brevo API
-    const xcontactData = {
+    const contactData = {
       email: email,
       attributes: {
-        FIRSTNAME: "MEU NOVO" + nome,
-        TELEFONE_VALIDO: TELEFONE_VALIDO,
-        RAZAO_SOCIAL: razaoSocial
+        FIRSTNAME: nome,
+        RAZAO_SOCIAL: RAZAO_SOCIAL
       },
       listIds: [3], // Adding to list ID 3 (campanha_setembro)
       updateEnabled: true // Update if contact already exists
     };
 
-    console.log('Sending to Brevo:', xcontactData);
-    console.log("teste novamente")
+    console.log('Sending to Brevo:', contactData);
 
     // Send to Brevo API
     const brevoResponse = await fetch('https://api.brevo.com/v3/contacts', {
@@ -48,8 +48,7 @@ Deno.serve(async (req) => {
         'Content-Type': 'application/json',
         'api-key': brevoApiToken,
       },
-      body: JSON.stringify(brevoPayload),
-
+      body: JSON.stringify(contactData),
     });
 
     const brevoData = await brevoResponse.json();
@@ -84,10 +83,12 @@ Deno.serve(async (req) => {
   } catch (error) {
     console.error('Error in brevo-lead function:', error);
 
+    const errorMessage = error instanceof Error ? error.message : 'Erro interno do servidor';
+
     return new Response(
       JSON.stringify({
         success: false,
-        error: error.message || 'Erro interno do servidor'
+        error: errorMessage
       }),
       {
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
