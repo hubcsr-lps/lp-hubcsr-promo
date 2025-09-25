@@ -21,7 +21,7 @@ const HeroSection = () => {
                 Em até 7 dias sua OSC organizada e pronta para crescer.
               </h1>
               <p className="text-lg sm:text-xl lg:text-2xl text-white/90 leading-relaxed animate-slide-in-left max-w-2xl mx-auto lg:mx-0">
-                Ganhe visibilidade, engaje voluntários e comece a receber doações de forma simples e transparente — tudo por apenas R$ 350/mês.
+                Ganhe visibilidade, engaje voluntários e comece a receber doações de forma simples e transparente.
               </p>
             </div>
 
