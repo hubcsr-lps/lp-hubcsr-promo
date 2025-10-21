@@ -20,44 +20,8 @@
   <meta name="twitter:image" content="/hubcsr-01.png" /> -->
 
   <link rel="icon" type="image/png" href="/logo-hubcsr-02.png">
-  <script type="module">
-    import Chatbox from 'https://cdn.jsdelivr.net/npm/@chatvolt/embeds@latest/dist/chatbox/index.js';
-
-    // 1. Criamos uma função "async" para poder usar "await" dentro dela.
-    //    Isso resolve o erro de "top-level await" durante o build.
-    async function initializeChatWidget() {
-      try {
-        // 2. A inicialização do widget agora acontece dentro da função.
-        const widget = await Chatbox.initBubble({
-          agentId: 'cmfb4wial01esdhx3gwc3l3h9',
-          //[optional] Override initial messages
-          interface: {
-            initialMessages: [
-              'Olá, tudo bem?',
-              'Você está pronto(a) para ter sua OSC organizada e pronta para crescer em até 7 dias?',
-            ],
-          },
-
-          //[optional] Provided context will be Appended to the Agent system prompt
-          context: "cliente está vindo do site (https://lp.hubcsr.tech/) que é uma lp exclusiva para campanha.",
-        });
-
-        // 3. Anexamos o widget à 'window' APÓS ele ser criado com sucesso.
-        //    Isso permite que você o controle de outros lugares (como botões React).
-        window.chatWidget = widget;
-
-        console.log("Widget do chat foi inicializado com sucesso!");
-
-      } catch (error) {
-        // 4. Adicionado um bloco 'catch' para capturar qualquer erro durante a inicialização.
-        console.error("Ocorreu um erro ao inicializar o widget do chat:", error);
-      }
-    }
-
-    // 5. Finalmente, chamamos a função para que todo o processo comece.
-    initializeChatWidget();
-
-  </script>
+  <!-- JIVO -->
+  <script src="//code.jivosite.com/widget/MQWFriNbHZ" async></script>
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({
